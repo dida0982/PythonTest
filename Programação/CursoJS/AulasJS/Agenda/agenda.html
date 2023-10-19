@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Minha Agenda</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>Minha Agenda</h1>
+    <div class="container">
+      <form>
+        <label for="date">Data:</label>
+        <input type="date" id="date">
+        <label for="time">Hora:</label>
+        <input type="time" id="time">
+        <label for="event">Evento:</label>
+        <input type="text" id="event">
+        <button type="button" onclick="addEvent()">Adicionar</button>
+      </form>
+      <ul id="event-list"></ul>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

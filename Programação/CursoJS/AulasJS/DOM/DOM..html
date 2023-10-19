@@ -1,0 +1,51 @@
+<!DOCTYPE html> <!--html5-->
+<html lang="pt-br"> <!-- "pt-br" (para ficar em portugues)-->
+<head> <!--Cabeçalho-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title> <!--Nome do site-->
+    <style>
+        body{ 
+            background: rgb(31, 27, 27); /*cor de fundo*/
+            color: rgb(0, 255, 17); /*cor das letras*/
+            font:normal 15pt Arial; /*tipo e tamanho das letras*/
+        }
+    </style>
+</head> 
+<body> <!--corpo do sit-->
+    <h1>Iniciando estudos com DOM. </h1> <!--(Título)-->
+    <p>Aqui vai o resultado.</p> <!--conteúdo 1 (parágrafo)-->
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p> <!--paragrafo--> <!--Strong = negrito-->
+    <div id="msg">Clique em mim.</div> <!--conteudo 2-->
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        var d = window.document.getElementById('msg')
+        d.style.background = 'red' //grifa a linha//
+        d.innerText = 'Estou aguarando...'
+
+        corpo.style.background = 'black'
+window.document.write(p1.innerText)
+p1.style.color = 'blue'
+var d = window.document.querySelector('div#msg') //toda 'div é representada por '#', toda classe é representada por '.'.
+d.style.background = 'white'
+
+    </script>
+</body>
+</html>
+<!--O que é DOM? Document, Object, Model. 
+Árvore DOM = window: Locatin: (loc do sit), Document (documento atual), History (histórico)
+Document: HTML: head (meta, title), body (h1, p, p(strong), div).
+     Selecionando:
+Marca: getElementsByTagName().
+ID: getElementeByld()
+Nome: getElementsByName()
+Classe: getElementsByClassName()
+Seletor: querySelector() querySelectorAll().
+Visual Code:
+ctrl + = aumenta.
+AULA 10
+Eventos DOM:
+
+-->

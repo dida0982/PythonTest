@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minha Tabela Bancária</title>
+    <style>
+      table {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      th {
+        background-color: #4caf50;
+        color: white;
+        font-weight: bold;
+        text-align: left;
+        padding: 8px;
+      }
+
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      tr:hover {
+        background-color: #ddd;
+      }
+
+      .btn {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+
+      .btn-danger {
+        background-color: #f44336;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Minha Tabela Bancária</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Descrição</th>
+          <th>Valor</th>
+          <th>Saldo</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+        <tr>
+          <td>01/01/2022</td>
+          <td>Salário</td>
+          <td>5000</td>
+          <td>5000</td>
+          <td>
+            <button class="btn btn-danger" onclick="deleteRow(this)">Excluir</button>
+          </td>
+        </tr>
+        <tr>
+          <td>03/01/2022</td>
+          <td>Aluguel</td>
+          <td>-1000</td>
+          <td>4000</td>
+          <td>
+            <button class="btn btn-danger" onclick="deleteRow(this)">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2"></td>
+          <td>Total:</td>
+          <td id="saldo">4000</td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <form id="form" onsubmit="addRow(); return false;">
+      <h2>Adicionar Registro</h2>
+      <label>Data:</label>
+      <input type="date" id="data" required />
+      <br />
+      <label>Descrição:</label>
+      <input type="text" id="descricao" required />
+      <br />
+      <label>Valor:</label>
+      <input type="number" id="valor" required />
+      <br />
+      <button class="btn" type="submit">Adicionar</button>
+    </form>
+
+    <script src="script.js"></script>
+
+      let tableBody = document.getElementById("table-body");
+      let saldo = document.getElementById("saldo");
+
+     

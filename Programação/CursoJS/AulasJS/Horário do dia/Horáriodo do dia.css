@@ -1,0 +1,40 @@
+body {
+    background:  rgb(133, 132, 132);
+    font: normal 15px Arial;
+}
+
+header {
+    color: black;
+    text-align: center;
+}
+section {
+    background: goldenrod;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(4, 0, 2, 0.363);
+}
+div {
+    text-align: center;
+    padding: 8px;
+}
+
+footer {
+    color: black;
+    text-align: center;
+    font-style: italic;
+}
+div#foto {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #imagens {
+    margin: 0 auto;
+}
+div#imagens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

@@ -1,0 +1,13 @@
+Array:
+    Array
+    let num = [5,8,4]
+    num ; 0,1,2,...
+    O Array facilita muito para coisas simples. Para coisas maisavançadas ele é meio limitado.
+
+
+Object:
+    Object
+    let amigo = {nome:´José´,sexo:´M´,peso:85.4,engordar(p){}}
+    amigo
+    José(nome)/M(sexo)/85.4(peso)/[function](engordar()).
+    
